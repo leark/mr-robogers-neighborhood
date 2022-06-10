@@ -83,5 +83,9 @@ Test10: "It should return reversed array if reverse is true"
 Code: beepBoop(5, "", true);
 Expected Output: [5, 4, "Won't you be my neighbor?""Boop!", "Beep!", 0]
 
+Test11: "It should return an array of numbers from 0 to the user's inputted number even if that number is negative"
+Code: beepBoop(-5);
+Expected Output: [-5,-4,Won't you be my neighbor?,Boop!,Beep!,0]
+
 ```
 

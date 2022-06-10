@@ -3,15 +3,30 @@
 function beepBoop(number, name, reverse) {
   if (Number(number)) {
     let result = [];
-    if (reverse) {
-      // we start i at number and count backwards
-      for (let i = number; i >= 0; i--) {
-        result.push(substitute(i, name));
+    // check if number is a negative number
+    if (number < 0) {
+      if (reverse) {
+        // start i at 0 and count towards number
+        for (let i = 0; i >= number; i--) {
+          result.push(substitute(i, name));
+        }
+      } else {
+        // start at number and count towards 0
+        for (let i = number; i <= 0; i++) {
+          result.push(substitute(i, name));
+        }
       }
     } else {
-      // start i at 0 and count up towards number
-      for (let i = 0; i <= number; i++) {
-        result.push(substitute(i, name));
+      if (reverse) {
+        // start at number and count towards 0
+        for (let i = number; i >= 0; i--) {
+          result.push(substitute(i, name));
+        }
+      } else {
+        // start at 0 and count towards number
+        for (let i = 0; i <= number; i++) {
+          result.push(substitute(i, name));
+        }
       }
     }
     return result;
