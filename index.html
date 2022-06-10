@@ -9,7 +9,30 @@
 </head>
 <body>
   <div class="container">
-
+    <div class="header jumbotron">
+      <h1 class="display-5">Mr. Roboger's Neighborhood</h1>
+      <p class="lead">Ask Mr. Roboger a number and Mr. Roboger will respond!</p>
+    </div>
+    <div id="main">
+      <form id="question-form">
+        <div class="form-group row">
+          <label id="userInputLabel" for="userInput"  class="col-form-label col-sm-2">Number to Ask</label>
+          <div class="col-sm-8">
+            <input id="userInput" class="form-control" type="number" required/>
+            <div class="invalid-feedback">
+              Please enter a number.
+            </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button id="submitBtn" class="btn btn-dark">Ask</button>
+        </div>
+      </form>
+      </div>
+      <div id="outputDiv">
+        <p></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
