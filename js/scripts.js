@@ -2,12 +2,17 @@
 
 function beepBoop(number) {
   let result = [];
-  for (let i = 0; i < number; i++) {
-    if (i === 3) {
-      result.push("Won't you be my neighbor?");
-    } else {
-      result.push(i);
+  for (let i = 0; i <= number; i++) {
+    const numString = i.toString();
+    const numArray = numString.split('');
+    let toBeAdded = i;
+    for (let j = 0; j < numArray.length; j++) {
+      if (numArray[j] === '3') {
+        toBeAdded = "Won't you be my neighbor?";
+        break;
+      }
     }
+    result.push(toBeAdded);
   }
   return result;
 }

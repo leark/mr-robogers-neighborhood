@@ -58,5 +58,9 @@ Test3: "It should return an array of numbers from 0 to the user's inputted numbe
 Code: beepBoop(5);
 Expected Output: [0, 1, 2, "Won't you be my neighbor?", 4, 5]
 
+Test3: "It should return an array of numbers from 0 to the user's inputted number but any number with 3 should be replaced with 'Won't you be my neighbor?'"
+Code: beepBoop(14);
+Expected Output: [0, 1, 2, "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 10, 11, 12, "Won't you be my neighbor?", 14]
+
 ```
 
