@@ -87,5 +87,13 @@ Test11: "It should return an array of numbers from 0 to the user's inputted numb
 Code: beepBoop(-5);
 Expected Output: [-5,-4,Won't you be my neighbor?,Boop!,Beep!,0]
 
+Test12: "Number should not exceed 100,000 for the sake of our computers"
+Code: beepBoop(100001);
+Expected Output: "Please put in a number less than 100000"
+
+Test13: "Number should not be smaller than -100,000 for the sake of our computers"
+Code: beepBoop(-100001);
+Expected Output: "Please put in a number greater than -100000"
+
 ```
 

@@ -5,6 +5,9 @@ function beepBoop(number, name, reverse) {
     let result = [];
     // check if number is a negative number
     if (number < 0) {
+      if (number < -100000) {
+        return 'Please put in a number greater than -100000';
+      }
       if (reverse) {
         // start i at 0 and count towards number
         for (let i = 0; i >= number; i--) {
@@ -17,6 +20,9 @@ function beepBoop(number, name, reverse) {
         }
       }
     } else {
+      if (number > 100000) {
+        return 'Please put in a number less than 100000';
+      }
       if (reverse) {
         // start at number and count towards 0
         for (let i = number; i >= 0; i--) {
