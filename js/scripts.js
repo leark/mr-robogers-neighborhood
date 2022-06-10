@@ -25,25 +25,24 @@ function beepBoop(number, name, reverse) {
 function substitute(number, name) {
   const numString = number.toString();
   const numArray = numString.split('');
-  // initialize toBeAdded with current number
-  let toBeAdded = number;
+  let result = number;
   for (let j = 0; j < numArray.length; j++) {
-    // change toBeAdded if number contains 3 in any digit and break out of loop
+    // if number contains 3 in any digit then return text
     if (numArray[j] === '3') {
       if (name.length > 0) {
         return "Won't you be my neighbor, " + name + '?';
       } else {
         return "Won't you be my neighbor?";
       }
-      // change toBeAdded if number contains 2
+      // change result if number contains 2
     } else if (numArray[j] === '2') {
-      return 'Boop!';
-      // change toBeAdded if number contains 1
+      result = 'Boop!';
+      // change result if number contains 1
     } else if (numArray[j] === '1') {
-      return 'Beep!';
+      result = 'Beep!';
     }
   }
-  return toBeAdded;
+  return result;
 }
 
 // UI Logic

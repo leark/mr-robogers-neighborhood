@@ -16,26 +16,23 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+Mr. Roboger's Neighborhood webpage asks the user to fill in a number and optionally a name and prints numbers from 0 to the number user put in going up by 1. Among the numbers printed if it contains 3, 2, or 1 in any of the digits, it will be replaced with text "Won't you be my neighbor?", "Boop!", or "Beep!".
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Open Git Bash if on Windows and terminal if on Mac
+2. Run the command
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+    ``Git clone https://github.com/leark/mr-robogers-neighborhood``
+
+3. Go inside mr-robogers-neighborhood directory
+4. Open index.html
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+No known bugs
 
 ## License
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
 [GNU](/LICENSE-GNU)
 
@@ -43,7 +40,7 @@ Copyright (c) 2022 Seung Lee
 
 ## TDD
 
-```
+```text
 Describe: beepBoop()
 
 Test1: "It should return the number user inputted"
@@ -82,8 +79,8 @@ Test9: "It should return 'Won't you be my neighbor?' for numbers including 3 if 
 Code: beepBoop(5);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
 
-Test10: "It should return reversed array if reverse switch is toggled"
-Code: beepBoop(5);
+Test10: "It should return reversed array if reverse is true"
+Code: beepBoop(5, "", true);
 Expected Output: [5, 4, "Won't you be my neighbor?""Boop!", "Beep!", 0]
 
 ```
