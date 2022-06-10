@@ -79,9 +79,12 @@ Code: beepBoop(5, "Roger");
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor, Roger?", 4, 5]
 
 Test9: "It should return 'Won't you be my neighbor?' for numbers including 3 if no name is put in"
-Code: beepBoop(14);
-Code: beepBoop(5, "");
+Code: beepBoop(5);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
+
+Test10: "It should return reversed array if reverse switch is toggled"
+Code: beepBoop(5);
+Expected Output: [5, 4, "Won't you be my neighbor?""Boop!", "Beep!", 0]
 
 ```
 

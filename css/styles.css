@@ -6,6 +6,10 @@
   text-align: right;
 }
 
+#outputDiv {
+  display: none;
+}
+
 #outputDiv p {
   text-align: center;
 }
