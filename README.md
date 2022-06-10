@@ -40,3 +40,21 @@ _{Let people know what to do if they run into any issues or have questions, idea
 [GNU](/LICENSE-GNU)
 
 Copyright (c) 2022 Seung Lee
+
+## TDD
+
+```
+Describe: beepBoop()
+
+Test1: "It should return the number user inputted"
+Code: beepBoop(5);
+Expected Output: 5
+
+Test2: "It should return an array of numbers from 0 to the user's inputted number"
+Code: beepBoop(5);
+Expected Output: [0, 1, 2, 3, 4, 5]
+
+
+
+```
+

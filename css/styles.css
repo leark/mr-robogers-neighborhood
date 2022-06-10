@@ -5,3 +5,7 @@
 #userInputLabel {
   text-align: right;
 }
+
+#outputDiv p {
+  text-align: center;
+}
