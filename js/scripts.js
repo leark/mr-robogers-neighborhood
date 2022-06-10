@@ -1,7 +1,11 @@
 // Business Logic
 
 function beepBoop(number) {
-  return number;
+  let result = [];
+  for (let i = 0; i < number; i++) {
+    result.push(i);
+  }
+  return result;
 }
 
 // UI Logic
