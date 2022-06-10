@@ -70,5 +70,9 @@ Test6: "It should return an array of numbers from 0 to the user's inputted numbe
 Code: beepBoop(14);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 10, "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!"]
 
+Test7: "It should return an nothing if non number gets passed in"
+Code: beepBoop('fourteen');
+Expected Output: 
+
 ```
 
