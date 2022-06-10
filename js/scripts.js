@@ -3,7 +3,11 @@
 function beepBoop(number) {
   let result = [];
   for (let i = 0; i < number; i++) {
-    result.push(i);
+    if (i === 3) {
+      result.push("Won't you be my neighbor?");
+    } else {
+      result.push(i);
+    }
   }
   return result;
 }
