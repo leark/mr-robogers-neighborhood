@@ -1,6 +1,6 @@
 // Business Logic
 
-function beepBoop(number) {
+function beepBoop(number, name) {
   if (Number(number)) {
     let result = [];
     for (let i = 0; i <= number; i++) {
@@ -11,7 +11,11 @@ function beepBoop(number) {
       for (let j = 0; j < numArray.length; j++) {
         // change toBeAdded if number contains 3 in any digit and break out of loop
         if (numArray[j] === '3') {
-          toBeAdded = "Won't you be my neighbor?";
+          if (name.length > 0) {
+            toBeAdded = "Won't you be my neighbor, " + name + '?';
+          } else {
+            toBeAdded = "Won't you be my neighbor?";
+          }
           break;
           // change toBeAdded if number contains 2
         } else if (numArray[j] === '2') {
@@ -38,7 +42,8 @@ $(document).ready(function () {
     $('#outputDiv p').text('');
 
     // grab user input and print the result to output
-    const userNumber = $('#userInput').val();
-    $('#outputDiv p').text(beepBoop(userNumber));
+    const userName = $('#userInputName').val();
+    const userNumber = $('#userInputNumber').val();
+    $('#outputDiv p').text(beepBoop(userNumber, userName));
   });
 });

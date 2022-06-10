@@ -70,9 +70,18 @@ Test6: "It should return an array of numbers from 0 to the user's inputted numbe
 Code: beepBoop(14);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 10, "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!"]
 
-Test7: "It should return an nothing if non number gets passed in"
+Test7: "It should return nothing if non number gets passed in"
 Code: beepBoop('fourteen');
 Expected Output: 
+
+Test8: "It should return "Won't you be my neighbor, x?" where x is the name that was inputted for numbers with 3 in it"
+Code: beepBoop(5, "Roger");
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor, Roger?", 4, 5]
+
+Test9: "It should return 'Won't you be my neighbor?' for numbers including 3 if no name is put in"
+Code: beepBoop(14);
+Code: beepBoop(5, "");
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
 
 ```
 

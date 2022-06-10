@@ -16,9 +16,18 @@
     <div id="main">
       <form id="question-form">
         <div class="form-group row">
-          <label id="userInputLabel" for="userInput"  class="col-form-label col-sm-2">Number to Ask</label>
+          <label id="userInputLabel" for="userInputName"  class="col-form-label col-sm-2">Your Name</label>
           <div class="col-sm-8">
-            <input id="userInput" class="form-control" type="number" required/>
+            <input id="userInputName" class="form-control" type="text" />
+            <div class="invalid-feedback">
+              Please enter a name.
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label id="userInputLabel" for="userInputNumber"  class="col-form-label col-sm-2">Number to Ask</label>
+          <div class="col-sm-8">
+            <input id="userInputNumber" class="form-control" type="number" required/>
             <div class="invalid-feedback">
               Please enter a number.
             </div>
