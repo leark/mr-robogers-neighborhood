@@ -5,11 +5,19 @@ function beepBoop(number) {
   for (let i = 0; i <= number; i++) {
     const numString = i.toString();
     const numArray = numString.split('');
+    // initialize toBeAdded with current number
     let toBeAdded = i;
     for (let j = 0; j < numArray.length; j++) {
+      // change toBeAdded if number contains 3 in any digit and break out of loop
       if (numArray[j] === '3') {
         toBeAdded = "Won't you be my neighbor?";
         break;
+        // change toBeAdded if number contains 2
+      } else if (numArray[j] === '2') {
+        toBeAdded = 'Boop!';
+        // change toBeAdded if number contains 1
+      } else if (numArray[j] === '1') {
+        toBeAdded = 'Beep!';
       }
     }
     result.push(toBeAdded);
@@ -20,20 +28,14 @@ function beepBoop(number) {
 // UI Logic
 
 $(document).ready(function () {
+  // when "Ask" button is clicked
   $('form#question-form').submit(function (event) {
     event.preventDefault();
+    // clear the output div
     $('#outputDiv p').text('');
 
+    // grab user input and print the result to output
     const userNumber = $('#userInput').val();
     $('#outputDiv p').text(beepBoop(userNumber));
   });
 });
-
-/*
-Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
-For example, all digits of the number 109 would be replaced with "Beep!"
-Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
-For example, all digits of the number 2099 would be replaced with "Boop!"
-Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"
-For example, all digits of the number 32 would be replaced with "Won't you be my neighbor?"
-*/
