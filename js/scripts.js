@@ -58,8 +58,8 @@ function substitute(number, name) {
       // change result if number contains 2
     } else if (numArray[j] === '2') {
       result = 'Boop!';
-      // change result if number contains 1
-    } else if (numArray[j] === '1') {
+      // change result if number contains 1 and doesn't contain 2
+    } else if (numArray[j] === '1' && result !== 'Boop!') {
       result = 'Beep!';
     }
   }
